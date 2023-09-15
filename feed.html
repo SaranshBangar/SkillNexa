@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="landing.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                 $(".hamburger").click(function(){
+                      $(".wrapper").toggleClass("collapse");
+                      });
+                      
+                 $(".nav-item").click(function(){
+                      var target = $(this).data("target");
+                      $(".content-container").hide();
+                      $("#" + target).show();
+                 });
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Feed</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div class="top_menu">
+                    <div class="logo">
+                        logo
+                    </div>
+                    <ul>
+                        <li><a href="#">
+                            <i class="fas fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li class="nav-item" data-target="explore-container">
+                        <a href="#">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <span class="title">Explore</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-target="feed-container">
+                        <a href="#">
+                        <span class="icon"><i class="fa-regular fa-newspaper"></i></span>
+                        <span class="title">Feed</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-target="upskill-container">
+                        <a href="#">
+                        <span class="icon"><i class="fas fa-book-open"></i></span>
+                        <span class="title">Upskill</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com" class="logout">
+                        <span class="icon"><i class="fas fa-chevron-right"></i></span>
+                        <span class="title">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_container">
+                <div id="explore-container" class="content-container">
+                    <div class="item">
+                        Explore content goes here.
+                    </div>
+                </div>
+                <div id="feed-container" class="content-container">
+                    <div class="item">
+                        Feed content goes here.
+                    </div>
+                </div>
+                <div id="upskill-container" class="content-container">
+                    <div class="item">
+                        Upskill content goes here.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
